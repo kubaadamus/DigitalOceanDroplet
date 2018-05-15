@@ -5,6 +5,8 @@
 var connection = new WebSocket('ws://206.189.207.171:3000');
 connection.onmessage = function (event) { 
 document.getElementById('result0').value=event.data;
+connection.send("TEST");
+
 };
 </script>
 </head>

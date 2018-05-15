@@ -1,4 +1,6 @@
-var ws = require("nodejs-websocket")
+var ws = require("nodejs-websocket");
+
+
 
 console.log("Server stoi");
 
@@ -7,6 +9,9 @@ var server = ws.createServer(function (conn) {
     conn.on("text", function (str) {
         console.log("Received "+str)
         conn.sendText(str.toUpperCase()+"!!!")
+
+
+
     })
     conn.on("close", function (code, reason) {
         console.log("Connection closed")

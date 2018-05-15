@@ -1,14 +1,10 @@
 {
-  "name": "socket",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "",
+  "version": "",
   "dependencies": {
-    "socket.io": "^2.1.0"
+    "nodejs": "0.0.0",
+    "nodejs-websocket": "^1.7.1",
+    "socket-io": "^1.0.0",
+    "ws": "^5.1.1"
   }
 }

@@ -1,21 +1,21 @@
-<script src="/socket.io/socket.io.js"></script>
 
+<html>
+<head>
 <script>
-
-var socket = io()
-
-
-socket.on('message',function(data){
-
-console.log(data)
-
-socket.emit('emituje rzeczy')
-
-})
-
-
-
+var connection = new WebSocket('ws://206.189.207.171:3000');
+connection.onmessage = function (event) { 
+document.getElementById('result0').value=event.data;
+};
 </script>
+</head>
 
+<body>
+<p>
+Result: <output type=text id="result0" value="" readonly> </output>
+</p>
 
+<input type=text 
+onchange="connection.send(this.value); ">
+</body>
 
+</html>
